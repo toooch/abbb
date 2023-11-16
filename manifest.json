@@ -2,7 +2,7 @@
 	"name": "Adblocker-blocker-blocker",
 	"description": "",
 	"author": "Tooch",
-	"version": "0.2",
+	"version": "0.1",
 	"manifest_version": 3,
 	"action": {
 		"default_icon": "/images/YouTube-icon.png",
@@ -14,15 +14,9 @@
 			"js": ["/src/content.js"]
 		}
 	],
-	"background": {
-		"service_worker": "/src/background.js"
-	},
 	"permissions": [
 		"activeTab",
-		"scripting",
-		"notifications",
-        "storage",
-		"contextMenus"
+		"scripting"
 	],
 	"host_permissions": [
 		"https://www.youtube.com/*"
