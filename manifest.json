@@ -1,0 +1,33 @@
+{
+	"name": "Adblocker-blocker-blocker",
+	"description": "",
+	"author": "Tooch",
+	"version": "0.2",
+	"manifest_version": 3,
+	"action": {
+		"default_icon": "/images/YouTube-icon.png",
+		"default_title": "ABBB (Ad-Blocker-Blocker-Blocker)"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://www.youtube.com/*"],
+			"js": ["/src/content.js"]
+		}
+	],
+	"background": {
+		"service_worker": "/src/background.js"
+	},
+	"permissions": [
+		"activeTab",
+		"scripting",
+		"notifications",
+        "storage",
+		"contextMenus"
+	],
+	"host_permissions": [
+		"https://www.youtube.com/*"
+	],
+	"icons": {
+		"48": "/images/YouTube-icon.png"
+	}
+}
